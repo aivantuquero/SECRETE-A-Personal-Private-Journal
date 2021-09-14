@@ -1,0 +1,176 @@
+*{
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding:0;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+:root{
+    --primary:#315a39;
+    --secondary:#315e36;
+    --tertiary:#7a9f79;
+}
+
+.bg{
+    height: 100vh;
+    width: 100%;
+    background-color: var(--primary);
+}
+
+.panel{
+    position: relative;
+    height: 95%;
+    width: 500px;
+    margin: auto;
+    top: 20px;
+    background-color: #cadfc9;
+    border-radius: 25px;
+    box-shadow: 5px 10px 18px rgb(56, 56, 56);
+}
+
+.panel img{
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 65%;
+    top: 15%;   
+}
+
+
+.content{
+    position: absolute;
+    top: 59%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    text-align: center;
+    line-height: 50px;
+    padding: 40px;
+}
+
+.inputfield{
+    border: none;
+    appearance: none;
+    background-color: #ffffff;
+    border-radius: 10px;
+    font-size: 16px;
+    padding: 12px;
+    width: 270px;
+    margin: 10px 5px;
+    outline: none;
+}
+
+.inputfield:focus::placeholder{
+    color: transparent;
+}
+
+.inputfield::placeholder{
+    color:rgb(112, 109, 109);
+    transition: 0.3s;
+}
+
+#loginbtn{
+    border: none;
+    appearance: none;
+    background: var(--tertiary);
+    font-size: 22px;
+    padding: 10px;
+    color: white;
+    border-radius: 17px;
+    width: 150px;
+    margin: 30px 0;
+}
+
+#loginbtn:hover{
+    background: #b1dd9e;
+    transition: 0.3s ease-out;
+}
+
+.content a, p{
+    line-height: 15px;
+    overflow: visible;
+
+}
+
+.content a{
+    text-decoration: none;
+    color: var(--secondary);
+}
+
+.content a:hover{
+    color: var(--tertiary);
+    transition: 0.3s;
+}
+
+.panel h1{
+    position: relative;
+    text-align: center;
+    top: 20%;
+    color: var(--primary);
+}
+
+#bd{
+    color: var(--primary);
+}
+
+#err{
+    color: grey;
+    overflow: hidden;
+}
+
+footer{
+    background-color: rgb(56, 56, 56);
+    text-align: center;
+    padding: 20px;
+    color: white;
+    line-height: 50px;
+}
+
+footer div a{
+    text-decoration: none;
+    color: white;
+    margin: 0px 15px;
+}
+
+select{
+    border: 1px solid #315a39;
+    padding: 7px 11px;
+    border-radius: 10px;
+    color:rgb(112, 109, 109);
+}
+
+@media(max-width: 570px){
+    .panel{
+        width: 100%;
+    }
+    .inputfield{
+        width: 80vw;
+        padding: 8px;
+    }
+    *{
+        overflow-x:hidden;
+    }
+}
+
+@media(max-height: 860px){
+    .panel h1{
+        top:10%;
+    }
+}
+
+@media(max-height: 600px){
+    .panel h1{
+        top:6%
+    }
+}
+
+@media(orientation: landscape) and (max-height:730px){
+
+    .panel{
+        height: 800px;
+    }
+    .bg{
+        height:850px;
+    }
+}
